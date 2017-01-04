@@ -10,6 +10,8 @@ public class Constants{
 	
 	public static final String ShipWreck_URL = "http://localhost:9999/index.html";
 	
+	public static final String ClearTrip_URL = "https://www.cleartrip.com/";
+	
 	
 	public static final String  AddNewShipwreck_Name = "Test_1_Name"; 
 	public static final String  AddNewShipwreck_Description = "Test_1_Desc";

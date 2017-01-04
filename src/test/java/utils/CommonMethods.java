@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -28,6 +29,14 @@ public class CommonMethods {
 		String elementText = element.getAttribute(expectedText);
 		Assert.assertNotNull(element);
 		Assert.assertEquals(expectedText, elementText);
+	}
+	
+	public static void selectFromDropDown(WebElement e1, String valueToBeSelected){
+		
+		Select dropdown = new Select(e1);
+		dropdown.selectByValue(valueToBeSelected);
+		logger.info("The value:" + valueToBeSelected + "is selected from the dropdown");
+		
 	}
 	
 	

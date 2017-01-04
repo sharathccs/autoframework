@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="SanitySuite" parallel="true">
-
-
-	<test name="sanitytest_">
+<suite name="SanitySuite" >
+	<test name="FF_Test">
 	<classes>
-			<class name="training.NewTest" />
-			<class name="e2eTests.Shipwreck_e2e_test_2" />
+			<parameter name="browser" value="Firefox"/>
+			<class name="e2eTests.Shipwreck_e2e_ParallelTest_2" />
 		</classes>
-	</test>
+	</test>	
 	
+	<test name="Chrome_Test">
+	<classes>
+			<parameter name="browser" value="Chrome"/>
+			<class name="e2eTests.Shipwreck_e2e_ParallelTest_2" />
+		</classes>
+	</test>	
 </suite>
