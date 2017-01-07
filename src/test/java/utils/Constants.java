@@ -12,6 +12,7 @@ public class Constants{
 	
 	public static final String ClearTrip_URL = "https://www.cleartrip.com/";
 	
+	public static final String UrlWithIFrame_URL = "http://the-internet.herokuapp.com/tinymce";
 	
 	public static final String  AddNewShipwreck_Name = "Test_1_Name"; 
 	public static final String  AddNewShipwreck_Description = "Test_1_Desc";

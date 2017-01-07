@@ -2,6 +2,7 @@ package utils;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -36,7 +37,30 @@ public class CommonMethods {
 		Select dropdown = new Select(e1);
 		dropdown.selectByValue(valueToBeSelected);
 		logger.info("The value:" + valueToBeSelected + "is selected from the dropdown");
+	}
+	public static void switchToFrame (WebDriver driver, String idOrName){
 		
+		try{
+			driver.switchTo().frame(idOrName);
+			System.out.println("Navigated to frame with id:"+idOrName);
+		}catch (NoSuchFrameException e){
+			System.out.println("Unable to locate frame with id:"+idOrName);
+			e.printStackTrace();
+		}catch (Exception e1){
+			System.out.println("Unable to navigate to frame with id:"+idOrName);
+			e1.printStackTrace();
+		}
+	}
+	
+	public static void switchToDefaultFrame (WebDriver driver){
+		
+		try{
+			driver.switchTo().defaultContent();
+			System.out.println("Navigated back to default frame");
+		}catch (Exception e1){
+			System.out.println("Trouble in naviating to default frame");
+			e1.printStackTrace();
+		}
 	}
 	
 	
