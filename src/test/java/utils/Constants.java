@@ -15,7 +15,8 @@ public class Constants{
 	public static final String UrlWithIFrame_URL = "http://the-internet.herokuapp.com/tinymce";
 	
 	//public static final String ToolsQA_URL = "http://toolsqa.wpengine.com/handling-alerts-using-selenium-webdriver/";
-	public static final String ToolsQA_URL = "http://toolsqa.com/automation-practice-switch-windows/";
+	public static final String ToolsQA_SwitchWindows_URL = "http://toolsqa.com/automation-practice-switch-windows/";
+	public static final String ToolsQA_DynamicArray_URL = "http://toolsqa.wpengine.com/automation-practice-table/";
 	
 	
 	public static final String  AddNewShipwreck_Name = "Test_1_Name"; 

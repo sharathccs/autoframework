@@ -1,6 +1,10 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -48,6 +52,34 @@ public class ToolsQADemoSites {
 				
 			}
 		}
+	
+	
+	public static void _PrintTheDynamicTable(WebDriver driver){
+		WebElement objWebTableRows = CommonMethods.getElement(driver,"//table[@class='tsc_table_s13']/tbody/tr");
+		
+		Dimension j= objWebTableRows.getSize();
+		
+		List<WebElement> w1 = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/tbody/tr"));
+		System.out.println("Printing the table elements below:");
+		/*for(int k=0; k<w1.size(); k++){
+			w1.get(k).findElements(By.xpath("/td"));
+		}*/
+		//w1.get(1).findElements(By.xpath("/td")).get(1).getText()
+		System.out.println("Rows in table:"+w1.size());
+		for(WebElement w2: w1){
+			//System.out.println("Items in table:"+w2.getText());
+			
+			List<WebElement> w3 = w2.findElements(By.xpath(".//td"));
+			for(WebElement w4: w3){
+				System.out.print(w4.getText()+"	");
+			}
+			System.out.println("");
+		}
+		
+		
+	}
+	
+	
 	
 	
 		

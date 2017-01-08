@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SanitySuite" >
+
+
+	<test name="sanitytest_">
+	<classes>
+			<class name="e2eTests.ExampleForHandleJavaScriptAlert" />
+		</classes>
+	</test>
+</suite>

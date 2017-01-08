@@ -92,7 +92,7 @@
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testsuite_3.xml</suiteXmlFile>
+                        <suiteXmlFile>testsuite_4.xml</suiteXmlFile>
                         
                     </suiteXmlFiles>
                 </configuration>

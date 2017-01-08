@@ -17,9 +17,9 @@ import pageObjects.ToolsQADemoSites;
 import pageObjects.iFrameHomePage;
 import utils.Constants;
 
-public class ExampleForHandleJavaScriptAlert {
+public class ExampleForDynamicTables {
 	public static WebDriver driver;
-	final static Logger logger = Logger.getLogger(ExampleForHandleJavaScriptAlert.class);
+	final static Logger logger = Logger.getLogger(ExampleForDynamicTables.class);
 	
 	@BeforeMethod
 	public void beforeMethod() throws Exception { 
@@ -28,20 +28,22 @@ public class ExampleForHandleJavaScriptAlert {
 			FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 			FirefoxProfile firefoxProfile = new FirefoxProfile();       
 			//WebDriver driver = new FirefoxDriver(ffBinary,firefoxProfile)
-
+		
+		
+		
 			driver = new FirefoxDriver(ffBinary,firefoxProfile);
 			logger.info("New driver instantiated");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			logger.info("Implicit wait applied on the driver for 10 seconds");	
-			driver.get(Constants.ToolsQA_SwitchWindows_URL);
+			logger.info("Implicit wait applied on the driver for 10 seconds");
+			
+			driver.get(Constants.ToolsQA_DynamicArray_URL);
+			driver.manage().window().maximize();
 		    logger.info("Launched the app");
 		}
 	
 	@Test
 	public void iFrameExampleTest() throws Exception {
-		//ToolsQADemoSites._NavigateToDemoSite(driver,"Automation Practice Switch Windows");
-		ToolsQADemoSites._HandleJavaScriptAlert(driver);
-		
+		ToolsQADemoSites._PrintTheDynamicTable(driver);		
 	}
 
 	@AfterMethod
