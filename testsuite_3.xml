@@ -4,7 +4,7 @@
 
 	<test name="sanitytest_">
 	<classes>
-			<class name="e2eTests.ExampleForSwitchToFrame" />
+			<class name="e2eTests.ExampleForHandleJavaScriptAlert" />
 		</classes>
 	</test>
 </suite>
